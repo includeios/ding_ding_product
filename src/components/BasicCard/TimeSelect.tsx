@@ -28,7 +28,7 @@ const TimeSelect: FC<TimeSelectProps> = (props) => {
   return (
     <div className="time-select">
       <div className="text" onClick={handleClick}>
-        Time
+        <Icon name="icon-calendar" size="small" />
         <Icon name={open ? "icon-top" : "icon-down"} />
       </div>
       <Menu

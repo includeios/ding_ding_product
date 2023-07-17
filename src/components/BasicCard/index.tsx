@@ -24,10 +24,15 @@ const BasicCard: FC<BasicCardProps> = (props) => {
     <div className="basic-card">
       <header className="top-bar">
         <TooltipIcon
-          title="delete"
-          className="delete-icon"
+          title="删除卡片"
+          className="action-icon"
           name={"icon-delete"}
           onClick={deleteCard}
+        />
+        <TooltipIcon
+          title="高优"
+          className="action-icon"
+          name={"icon-priority-high"}
         />
         <TimeSelect />
       </header>

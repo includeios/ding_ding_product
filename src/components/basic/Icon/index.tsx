@@ -1,21 +1,15 @@
 import { FC } from 'react'
 import './index.less'
 
-export enum IconSize {
-  Big = 'big',
-  Normal = '',
-  Small = 'small'
-}
-
 export interface IconProps {
   name: string
-  size?: IconSize
+  size?: 'big' | 'small'
   className?: string
   onClick?: () => void
 }
 
 const Icon: FC<IconProps> = (props, ref) => {
-  const size = props.size ?? IconSize.Normal
+  const size = props.size ?? ''
 
   const handleClickIcon = () => {
     if (props.onClick) {

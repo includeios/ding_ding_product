@@ -1,8 +1,8 @@
 .basic-card {
   margin-top: 200px;
   margin-left: 200px;
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 320px;
   padding: 16px 6px;
   background: transparent;
   transition: all .5s ease;
@@ -11,13 +11,14 @@
   outline: none;
   box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, .2);
   border: solid @text-color;
-  border-width: 3px 3px 5px 5px;
+  border-width: 2px 2px 4px 4px;
   transform: rotate(-2deg);
   border-top-left-radius: 4% 95%;
   border-top-right-radius: 95% 4%;
   border-bottom-right-radius: 6% 92%;
   border-bottom-left-radius: 95% 5%;
-
+  background-image: url('@/assets/img/card-bg.jpg');
+  background-size: cover;
 
   &:hover {
     box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
