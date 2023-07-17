@@ -5,13 +5,14 @@
 ### 新增TODO卡片
 
 ### 按照状态筛选TODO卡片
+- 全部
 - 已完成
 - 已删除
-- 全部
+- 已超时
 
 ### 按照DDL维度筛选TODO卡片
 - 今日 本周 本月 （以及其他跨度按钮，支持自定义选择到操作区）
-  - all：今日 本周 本月 季度 本年 全年
+  - all：今日 本周 本月 季度 半年 全年
 - 时间维度筛选
   - 目前时间精度按天来
 
@@ -36,8 +37,20 @@
 
 
 ### 样式
-- 边框最好有那种手绘的感觉
+- 边框最好有那种手绘的感觉 
+  - https://codemyui.com/hand-drawn-border-buttons-css/#
+  - https://freefrontend.com/css-border-examples/
 
-
+41403E
 ## 配色
 https://www.colorbook.io/colorschemes/view/1445
+can change by user
+
+- 整体的背景色（白色）
+- 主色（更浅背景色，主色，更深主色）
+- Tag 
+
+
+## 其他
+- 切花语言
+- 切换皮肤

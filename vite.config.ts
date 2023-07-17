@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import eslint from '@nabla/vite-plugin-eslint';
+import * as path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': '/src'
+      '@': path.resolve(__dirname, 'src')
     }
   },
   css: {
@@ -18,7 +18,8 @@ export default defineConfig({
       less: {
         math: "always",
         relativeUrls: true,
-        javascriptEnabled: true
+        javascriptEnabled: true,
+        additionalData: `@import "@/assets/css/variables.less";`
       },
     },
   }

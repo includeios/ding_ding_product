@@ -1,12 +1,12 @@
 import ActionBar from './ActionBar'
-import Card from '@/components/Card'
+import MainCanvas from './MainCanvas'
 import './App.css'
 
 function App() {
   return (
     <>
       <ActionBar />
-      <Card />
+      <MainCanvas />
     </>
   )
 }
