@@ -1,7 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+@font-face {
+    font-family: 'LXG';
+    src: url('@/assets/fonts/LXG/LXGWWenKaiMonoLite-Regular.subset.woff2') format('woff2'),
+         url('@/assets/fonts/LXG/LXGWWenKaiMonoLite-Regular.subset.woff') format('woff'),
+         url('@/assets/fonts/LXG/LXGWWenKaiMonoLite-Regular.subset.ttf') format('ttf');
+}
 
+html {
+    background-color: #fcf8f9;
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,7 +35,7 @@ a:hover {
 
 body {
   margin: 0;
-  font-family: 'Patrick Hand SC';
+  font-family: 'LXG';
   color: @text-color;
 }
 
