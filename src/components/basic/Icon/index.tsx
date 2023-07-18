@@ -3,7 +3,7 @@ import './index.less'
 
 export interface IconProps {
   name: string
-  size?: 'big' | 'small'
+  size?: 'big' | 'small' | 'mini'
   className?: string
   onClick?: () => void
 }
@@ -23,7 +23,7 @@ const Icon: FC<IconProps> = (props, ref) => {
       aria-hidden="true"
       onClick={handleClickIcon}
     >
-      <use xlinkHref={`#${props.name}`} />
+      <use xlinkHref={`#icon-${props.name}`} />
     </svg>
   )
 }

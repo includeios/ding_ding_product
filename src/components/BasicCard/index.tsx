@@ -4,6 +4,7 @@ import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
 import type { CardItem } from '@/context/card-list'
 import TooltipIcon from '@/components/basic/TooltipIcon'
+import Icon from '@/components/basic/Icon'
 import TimeSelect from './TimeSelect';
 import './index.less'
 
@@ -23,30 +24,35 @@ const BasicCard: FC<BasicCardProps> = (props) => {
   return (
     <div className="basic-card">
       <header className="top-bar">
-        <TooltipIcon
-          title="删除卡片"
-          className="action-icon"
-          name={"icon-delete"}
-          onClick={deleteCard}
-        />
-        <TooltipIcon
-          title="高优"
-          className="action-icon"
-          name={"icon-priority-high"}
-        />
-        <TimeSelect />
-      </header>
-      <main>
-        <header>
+        <div className="title-container">
           <Checkbox
             checked={checked}
+            icon={<Icon name="un-check" size="big" />}
+            checkedIcon={<Icon name="checked" size="big" />}
             onChange={handleChangeCheckbox}
           />
           <TextField
             placeholder="Title"
             variant="standard"
           />
-        </header>
+        </div>
+
+        <TimeSelect />
+        <TooltipIcon
+          title="高优"
+          className="action-icon"
+          name="priority"
+        />
+        <TooltipIcon
+          title="删除卡片"
+          className="action-icon"
+          name="trash"
+          onClick={deleteCard}
+        />
+
+
+      </header>
+      <main>
         TODO markdown 部分
       </main>
     </div>

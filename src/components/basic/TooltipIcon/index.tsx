@@ -11,7 +11,7 @@ interface TooltipIconProps extends IconProps {
 const TooltipIcon: FC<TooltipIconProps> = (props) => {
   const { title, ...iconProps } = props
   return (
-    <Tooltip title={title} arrow>
+    <Tooltip title={title} arrow >
       <span className="icon-container">
         <Icon {...iconProps} />
       </span>
