@@ -1,0 +1,44 @@
+.time-select {
+  display: inline-flex;
+  position: relative;
+  height: 24px;
+  cursor: pointer;
+
+  .menu {
+    position: absolute;
+    top: 36px;
+    border-radius: 4px;
+    border: 1px solid;
+    background: #FFF;
+    width: 160px;
+    z-index: 1000;
+    font-size: 14px;
+
+    &.show {
+      display: block;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .menu-item {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    border-bottom: 1px solid;
+    cursor: pointer;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+  }
+
+  .time {
+    margin-right: 2px;
+    font-size: 12px;
+  }
+}

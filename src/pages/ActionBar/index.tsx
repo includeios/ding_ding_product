@@ -1,5 +1,5 @@
 import AddNewButton from "@/components/AddNewButton";
-import TimeSwiper from "@/components/TimeSwiper";
+import TimeSwipe from "@/components/TimeSwipe";
 import './index.less'
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
       <AddNewButton />
       <br />
       <br />
-      <TimeSwiper />
+      <TimeSwipe />
     </div>
   )
 }

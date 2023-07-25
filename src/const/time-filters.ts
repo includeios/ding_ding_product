@@ -1,3 +1,8 @@
+import dayjs from 'dayjs'
+import quarterOfYear from 'dayjs/plugin/quarterOfYear'
+
+dayjs.extend(quarterOfYear)
+
 export interface TimeFilterItem {
   title: string,
   check: (ddl: number) => boolean,
@@ -9,38 +14,37 @@ export const TimeFilters = [
   {
     title: '今日',
     key: 'today',
-    check: (ddl: number) => true,
+    value: dayjs(),
+    check: (ddl: number) => dayjs(ddl).isBefore(dayjs().endOf('day')),
     picked: true,
     default: true,
   },
   {
     title: '本周',
     key: 'week',
+    value: dayjs().endOf('week'),
     picked: true,
-    check: (ddl: number) => true,
+    check: (ddl: number) => dayjs(ddl).isBefore(dayjs().endOf('week')),
   },
   {
     title: '本月',
     key: 'month',
+    value: dayjs().endOf('month'),
     picked: true,
-    check: (ddl: number) => true,
+    check: (ddl: number) => dayjs(ddl).isBefore(dayjs().endOf('month')),
   },
   {
     title: '季度',
-    key: 'season',
+    key: 'quarter',
     picked: false,
-    check: (ddl: number) => true,
-  },
-  {
-    title: '半年',
-    picked: false,
-    key: 'half-year',
-    check: (ddl: number) => true,
+    value: dayjs().endOf('quarter'),
+    check: (ddl: number) => dayjs(ddl).isBefore(dayjs().endOf('quarter')),
   },
   {
     title: '全年',
     key: 'year',
     picked: false,
-    check: (ddl: number) => true,
+    value: dayjs().endOf('year'),
+    check: (ddl: number) => dayjs(ddl).isBefore(dayjs().endOf('year')),
   }
 ]

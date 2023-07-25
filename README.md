@@ -46,11 +46,24 @@
   - https://codemyui.com/hand-drawn-border-buttons-css/#
   - https://freefrontend.com/css-border-examples/
 
+
+  - https://codemyui.com/hand-drawn-underline-effect-for-links/
+  - https://codemyui.com/link-underline-button-animation-hover/
+
+
+  TODOLIST:
+  - https://codemyui.com/strike-off-todo-list-animation/
+  - https://codemyui.com/cross-off-checklist/
+
+
+  Tooltip
+  
+
 41403E
 
 ## 配色
 
-https://www.colorbook.io/colorschemes/view/1445
+https://www.colorbook.io/hexcolors/view/FDFCF8
 can change by user
 
 - 整体的背景色（白色）

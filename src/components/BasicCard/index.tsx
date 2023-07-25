@@ -1,11 +1,12 @@
 import type { FC } from 'react'
 import { useState } from 'react'
-import Checkbox from '@mui/material/Checkbox';
-import TextField from '@mui/material/TextField';
+import Checkbox from '@/components/basic/Checkbox'
 import type { CardItem } from '@/context/card-list'
 import TooltipIcon from '@/components/basic/TooltipIcon'
-import Icon from '@/components/basic/Icon'
 import TimeSelect from './TimeSelect';
+import type { Dayjs } from 'dayjs'
+import { TimeFilters } from '@/const/time-filters'
+
 import './index.less'
 
 interface BasicCardProps {
@@ -13,9 +14,15 @@ interface BasicCardProps {
   deleteCard: () => void
 }
 
+export type TimeItem = {
+  value: Dayjs | null
+  key: typeof TimeFilters[number]['key'] | 'custom'
+}
+
 const BasicCard: FC<BasicCardProps> = (props) => {
   const { deleteCard } = props
   const [checked, setChecked] = useState(false)
+  const [ddlTime, setDdlTime] = useState<TimeItem | null>(null)
 
   const handleChangeCheckbox = () => {
     setChecked(() => !checked)
@@ -27,32 +34,30 @@ const BasicCard: FC<BasicCardProps> = (props) => {
         <div className="title-container">
           <Checkbox
             checked={checked}
-            icon={<Icon name="un-check" size="big" />}
-            checkedIcon={<Icon name="checked" size="big" />}
             onChange={handleChangeCheckbox}
           />
-          <TextField
-            placeholder="Title"
-            variant="standard"
+          <input
+            className="title-input"
+            placeholder="请输入标题"
           />
         </div>
-
-        <TimeSelect />
+        <TimeSelect
+          time={ddlTime}
+          onChangeTime={setDdlTime}
+        />
         <TooltipIcon
-          title="高优"
+          desc="高优"
           className="action-icon"
           name="priority"
         />
         <TooltipIcon
-          title="删除卡片"
+          desc="删除卡片"
           className="action-icon"
           name="trash"
           onClick={deleteCard}
         />
-
-
       </header>
-      <main>
+      <main className="card-main">
         TODO markdown 部分
       </main>
     </div>

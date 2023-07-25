@@ -19,6 +19,7 @@
   "dependencies": {
     "@mui/base": "5.0.0-beta.6",
     "@mui/material": "^5.13.7",
+    "@mui/x-date-pickers": "^6.10.2",
     "@remirror/react": "^2.0.32",
     "dayjs": "^1.11.9",
     "less": "^4.1.3",

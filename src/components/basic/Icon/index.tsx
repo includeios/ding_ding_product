@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import './index.less'
 
-export interface IconProps {
+export type IconProps = {
   name: string
   size?: 'big' | 'small' | 'mini'
   className?: string

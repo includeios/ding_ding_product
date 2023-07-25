@@ -3,15 +3,14 @@
   margin-left: 200px;
   width: 460px;
   height: 400px;
-  background: transparent;
   transition: all .5s ease;
   color: @text-color;
   letter-spacing: 1px;
   outline: none;
-  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, .2);
+  box-shadow: 20px 38px 34px -26px @shadow-lighter;
   border: solid @text-color;
   border-width: 1px 2px 3px 3px;
-  transform: rotate(-2deg);
+  transform: rotate(-1deg);
   border-top-left-radius: 4% 95%;
   border-top-right-radius: 95% 4%;
   border-bottom-right-radius: 6% 92%;
@@ -19,7 +18,7 @@
   background-size: cover;
 
   &:hover {
-    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+    box-shadow: 2px 8px 4px -6px @shadow;
   }
 }
 
@@ -29,25 +28,46 @@
   transform: rotate(1deg);
   padding: 8px 8px 8px 4px;
   margin: 10px 4px 0 12px;
+  align-items: center;
+  z-index: 1000;
+  position: relative;
 }
 
 .title-container {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-container {
+  height: 24px;
+  margin-left: 8px;
 }
 
 .action-icon {
   cursor: pointer;
-  margin-left: 8px;
+  display: inline-flex;
+  height: 24px;
 }
 
-.time-select {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.card-main {
+  padding: 18px 24px;
+  transform: rotate(1deg);
+}
 
-  .text {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.title-input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid @text-color;
+  height: 32px;
+  width: 220px;
+  color: @text-color;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: @text-color-lighter;
   }
 }

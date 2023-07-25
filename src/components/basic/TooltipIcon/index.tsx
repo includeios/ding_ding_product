@@ -1,17 +1,14 @@
 import { FC } from 'react'
-import Icon from '@/components/basic/Icon';
-import type { IconProps } from '@/components/basic/Icon';
-import Tooltip from '@mui/material/Tooltip';
+import Icon, { type IconProps } from '@/components/basic/Icon';
+import Tooltip, { type TooltipProps } from '@/components/basic/Tooltip';
 import './index.less'
 
-interface TooltipIconProps extends IconProps {
-  title: string
-}
+type TooltipIconProps = IconProps & TooltipProps
 
 const TooltipIcon: FC<TooltipIconProps> = (props) => {
-  const { title, ...iconProps } = props
+  const { desc, position, ...iconProps } = props
   return (
-    <Tooltip title={title} arrow >
+    <Tooltip desc={desc} position={position}>
       <span className="icon-container">
         <Icon {...iconProps} />
       </span>

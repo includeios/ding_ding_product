@@ -5,59 +5,27 @@
     url('@/assets/fonts/LXG/LXGWWenKaiMonoLite-Regular.subset.ttf') format('ttf');
 }
 
-html {
-  background-color: #fcf8f9;
-}
-
 :root {
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
-  // 
-  --mui-palette-primary-main: @primary-color;
-  --mui-palette-primary-light: @primary-lighter-5;
-  --mui-palette-primary-dark: @primary-darker-5;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: #535bf2;
+  font-family: 'LXG';
+  background: #fdfcf8;
+  background-image: linear-gradient(#f4f3ef 0.1em, transparent 0), linear-gradient(90deg, #f4f3ef 0.1em, transparent 0);
+  background-size: 3em 3em;
 }
 
 body {
   margin: 0;
-  font-family: 'XiaoGuo'
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.MuiInputBase-input {
+  padding: 0 !important;
+  font-size: 14px !important;
+  font-family: 'LXG' !important;
+  color: @text-color !important;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background: #fdfcf8;
-    background-image: linear-gradient(#f4f3ef 0.1em, transparent 0), linear-gradient(90deg, #f4f3ef 0.1em, transparent 0);
-    background-size: 3em 3em;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
+.MuiOutlinedInput-notchedOutline {
+  border: none !important;
 }
